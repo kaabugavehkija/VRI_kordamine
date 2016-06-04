@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>interaktiivne</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	function bold(){
+		document.getElementById("text").style.fontWeight="bold";
+	};
+	function italic(){
+		var it = document.getElementById("text");
+		//var val=it.getPropertyValue("fontStyle");
+		var stiil =document.defaultView.getComputedStyle(it).getPropertyValue('font-style');
+		if(stiil=="normal"){
+			it.style.fontStyle='italic';}
+		else{
+			it.style.fontStyle='normal';}
+		//alert(stiil);
+	};
+	function underl(){
+		document.getElementById("text").style.textDecoration="underline";
+	};
+	</script>
+</head>
+<body>
+<p id="text">Muuda selle teksti stiili</p>
+<button type="button" onclick="bold()">bold</button>
+
+<button type="button" onclick="italic()">italic</button>
+
+<button type="button" onclick="underl()">underline</button>
+
+</body>
+</html>
