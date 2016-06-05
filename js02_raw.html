@@ -5,7 +5,17 @@
 	<title>interaktiivne</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
-// kood siia
+		
+		var div = document.getElementsByClassName("color");
+		div.onclick=function muuda(){
+			var k=this.style.backgroundColor;
+			//r h = this.getElementsByTagName("body");
+			//h.style.backgroundColor="blue";
+			alert(k);
+		//var stiil =document.defaultView.getComputedStyle(it).getPropertyValue('background-color');
+		//document.getElementsByClassName("color")
+		//alert(x);
+		}
 	</script>
 	<style type="text/css">
 	.color{
