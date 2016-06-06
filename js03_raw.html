@@ -5,17 +5,28 @@
 	<title>JS</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
-
-// JS või jQuery siia
-
+		window.onload = function(){
+		obj = document.getElementById("text");
+		var algsuurus =  parseFloat(document.defaultView.getComputedStyle(obj).getPropertyValue('font-size')); //parseFloat annab ainult numbri
+		document.getElementById("suurenda").onclick = function(){
+			obj.style.fontSize=(parseFloat(obj.style.fontSize) + 1)+"px";
+				}
+		document.getElementById("vahenda").onclick = function(){
+			obj.style.fontSize=(parseFloat(obj.style.fontSize) - 1)+"px";
+				}
+		document.getElementById("taasta").onclick = function(){
+			obj.style.fontSize=(algsuurus)+"px";
+				}
+		}
+			
 	</script>
 </head>
 <body>
 
 
-<button>++</button>
-<button>taasta</button>
-<button>--</button>
+<button id = "suurenda">++</button>
+<button id = "taasta">taasta</button>
+<button id = "vahenda">--</button>
 <p id="text">Siin on tekst, võimalda muuta selle suurust</p>
 </body>
 </html>
